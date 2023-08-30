@@ -3,15 +3,18 @@ import { Box } from '@mui/material';
 import SearchExercises from '../components/SearchExercises';
 import Exercises from '../components/Exercises';
 import HeroBanner from '../components/HeroBanner';
-const home = () => {
+const Home = () => {
+  const [bodyPart,setBodyPart]=useState('all');//bodyPart is the value of the body part selected
+  const [exercises, setExercises] = useState([]); //exercises is the array of exercises displayed after search
+
   return (
     <Box>
       <HeroBanner />
-      <SearchExercises />
-      <Exercises />
+      <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart ={setBodyPart} />
+      <Exercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
 
     </Box>
   )
 }
 
-export default home
+export default Home
