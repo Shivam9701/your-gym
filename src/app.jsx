@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route ,Routes } from 'react-router-dom';
-import {Box} from '@mui/material'; //div only
-import Home from './pages/home';
+import {Box} from '@mui/material'; 
 import Navbar from './components/Navbar';
+import Home from './pages/home';
 import ExerciseDetail from './pages/exerciseDetail';
 import Footer from './components/footer';
 import './app.css';
