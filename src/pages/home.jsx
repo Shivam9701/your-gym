@@ -6,12 +6,20 @@ import HeroBanner from '../components/HeroBanner';
 const Home = () => {
   const [bodyPart,setBodyPart]=useState('all');//bodyPart is the value of the body part selected
   const [exercises, setExercises] = useState([]); //exercises is the array of exercises displayed after search
-
+  console.log(bodyPart);
   return (
     <Box>
       <HeroBanner />
-      <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart ={setBodyPart} />
-      <Exercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+      
+      <SearchExercises 
+      setExercises={setExercises} 
+      bodyPart={bodyPart} 
+      setBodyPart ={setBodyPart} />
+
+      <Exercises 
+      setExercises={setExercises} 
+      bodyPart={bodyPart} 
+      exercises={exercises} />
 
     </Box>
   )
