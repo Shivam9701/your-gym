@@ -18,10 +18,11 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
                     gap: '4px'
                 
             }}
+            onClick={() => setBodyPart(item)}
         >
             <img src={Icon} alt="icon" style={{ width: '40px', height: '40px' }} />
         
-            <Typography sx={{ fontSize: '0.69em' ,textTransform: 'uppercase'}}>{item}</Typography>
+            <Typography sx={{ fontWeight: 'bold' ,fontSize: '0.69em' ,textTransform: 'Capitalize'}}>{item}</Typography>
         </Stack>
     )
 }

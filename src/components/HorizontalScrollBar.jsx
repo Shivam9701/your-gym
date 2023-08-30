@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import {Button,Box,Typography} from '@mui/material'
+import {Box,Typography} from '@mui/material'
 import BodyPartCard from './BodyPartCard';  
 import {ScrollMenu, VisibilityContext} from 'react-horizontal-scrolling-menu';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
@@ -26,9 +26,8 @@ const RightArrow = () => {
     );
 };
 
-const HorizontalScrollBar = (props) => {
+const HorizontalScrollBar = ({ data, bodyPart, setBodyPart,bodyParts }) => {
  
-  const {data,bodyPart,setBodyPart} = props;
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         {data.map((item) => {
