@@ -2,6 +2,7 @@ import React,{useContext} from 'react'
 import {Box,Typography} from '@mui/material'
 import BodyPartCard from './BodyPartCard';  
 import {ScrollMenu, VisibilityContext} from 'react-horizontal-scrolling-menu';
+import 'react-horizontal-scrolling-menu/dist/styles.css';
 import RightArrowIcon from '../assets/icons/right-arrow.png';
 import LeftArrowIcon from '../assets/icons/left-arrow.png';
 
@@ -19,9 +20,9 @@ const RightArrow = () => {
     const { isLastItemVisible, scrollNext } = useContext(VisibilityContext);
 
     return (
-        <Typography disabled={isLastItemVisible} onClick={() => scrollNext()} className="left-arrow">
+        <div disabled={isLastItemVisible} onClick={() => scrollNext()} className="left-arrow">
             <img src={RightArrowIcon} alt="right-arrow" />
-        </Typography>
+        </div>
     );
 };
 
@@ -34,7 +35,7 @@ const HorizontalScrollBar = (props) => {
         {data.map((item) => {
           return (<Box 
              key ={item.id || item}
-             itemID={item.id || item}
+             itemId={item.id || item}
              title ={item.id || item}
              m="0 40px"            
             >
