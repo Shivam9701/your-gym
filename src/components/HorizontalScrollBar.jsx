@@ -10,9 +10,9 @@ const LeftArrow = () => {
     const { scrollPrev, isFirstItemVisible } = useContext(VisibilityContext);
 
     return (
-        <div disabled={isFirstItemVisible} onClick={() => scrollPrev()} className="right-arrow">
+        <Typography disabled={isFirstItemVisible} onClick={() => scrollPrev()} className="right-arrow">
             <img src={LeftArrowIcon} alt="left-arrow" />
-        </div>
+        </Typography>
     );
 };
 
@@ -20,24 +20,23 @@ const RightArrow = () => {
     const { isLastItemVisible, scrollNext } = useContext(VisibilityContext);
 
     return (
-        <div disabled={isLastItemVisible} onClick={() => scrollNext()} className="left-arrow">
+        <Typography disabled={isLastItemVisible} onClick={() => scrollNext()} className="left-arrow">
             <img src={RightArrowIcon} alt="right-arrow" />
-        </div>
+        </Typography>
     );
 };
 
-const HorizontalScrollBar = (props) => {
+const HorizontalScrollBar = ({ data, bodyPart, setBodyPart,bodyParts }) => {
  
-  const {data,bodyPart,setBodyPart} = props;
-  console.log(data);
   return (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         {data.map((item) => {
           return (<Box 
              key ={item.id || item}
-             itemId={item.id || item}
+             itemID={item.id || item}
              title ={item.id || item}
-             m="0 40px"            
+             m="0 0px" 
+             sx={{width :{xs:'20vw', md:'15vw}'}}}            
             >
             <BodyPartCard item={item} bodyPart={bodyPart} setBodyPart ={setBodyPart} />
            </Box>) 
