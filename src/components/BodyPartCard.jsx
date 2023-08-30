@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material'
 import Icon from '../assets/icons/gym.png'
 
 const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
-    console.log(item);
+    
     return (
         <Stack
             type="button" alignItems="center" justifyContent="center"
