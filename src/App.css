@@ -78,10 +78,6 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-.exercise-card img {
-  height: 326px;
-}
-
 .bodyPart-card {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
@@ -125,10 +121,6 @@ body {
     display: none;
   }
 
-  .exercise-card {
-    width: 320px;
-  }
-
   .exercise-video {
     width: 320px;
     height: 300px;
@@ -136,8 +128,16 @@ body {
 
 }
 
-@media screen and (max-width:400px) {
-  .exercise-card {
-    width: 280px;
+.exercise-card {
+    width: 20vw;
   }
+
+@media screen and (max-width:900px) {
+  .exercise-card {
+    width: 20vw;
+  }
+}
+.exercise-card img {
+  height: 326px;
+  width: 100%;
 }
