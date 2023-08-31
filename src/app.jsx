@@ -7,7 +7,7 @@ import ExerciseDetail from './pages/ExerciseDetail';
 
 
 import Footer from './components/footer';
-import './app.css';
+import './App.css';
 
 const App = () => {
   return (
