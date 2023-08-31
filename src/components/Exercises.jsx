@@ -34,7 +34,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const currentExercises =exercises.slice(indexOfFirstExercise,indexOfLastExercise); 
   
   return (
-    <Box id="exercises" sx={{ mt: { lg: '110px', } }} mt="50px" p="20px">
+    <Box id="exercises" sx={{ mt: { xs:'50px', lg: '110px' } }}  p="20px">
       <Typography variant="h3" mb="46px">
         Showing Results
       </Typography>

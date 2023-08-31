@@ -29,10 +29,10 @@ const RightArrow = () => {
 
 const HorizontalScrollBar = ({ data, bodyPart, setBodyPart,isBodyParts }) => {
   
-  const styleToApply = isBodyParts ? { width: { xs: '20vw', md: '15vw'}} : {width :{xs:'25vw',md:'20vw'}};
+  const styleToApply = isBodyParts ? { width: '100%'} : {width :'100%'};
 
   return (
-    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} className={!isBodyParts&&'similar'}>
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
         {data.map((item) => {
           return (<Box 
              key ={item.id || item}
@@ -42,7 +42,7 @@ const HorizontalScrollBar = ({ data, bodyPart, setBodyPart,isBodyParts }) => {
              sx={styleToApply}            
             >
               { isBodyParts ? <BodyPartCard item={item} bodyPart={bodyPart} setBodyPart ={setBodyPart} />
-             : <ExerciseCard exercise={item}/>}
+             : <ExerciseCard exercise={item} hsb/>}
            </Box>) 
         })}
     </ScrollMenu>

@@ -42,14 +42,14 @@ const SearchExercises = ({ setExercises,bodyPart,setBodyPart }) => {
      <Box position="relative" mb="72px">
 
         <TextField height="76px" value={search} onChange={(e)=>{setSearch(e.target.value.toLowerCase())}} placeholder='Search Exercises' type='text'
-          sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '40px' },width:{lg:'800px',xs:'350px'},backgroundColor:"#fff",borderRadius:'5px'  }} />
+          sx={{ input: { fontWeight: '700', border: 'none', borderRadius: '40px' },width:{lg:'800px',xs:'320px'},backgroundColor:"#fff",borderRadius:'5px'  }} />
        
         <Button className="search-btn" sx={{bgcolor : '#ff2625',color:'#fff',textTransform:'none',width:{lg:'175px',xs:'80px'},fontSize:{lg:'20px',xs:'14px'},height:'56px',position:'absolute',right:'0'}}
           onClick={handleSearch}> 
         Search
         </Button>
      </Box>
-     <Box sx={{position:"relative",width:'100%',p:'20px'}} >
+     <Box sx={{position:"relative",width:'100%'}} > {/* here */}
       <HorizontalScrollBar data={bodyParts} isBodyParts
            setBodyPart={setBodyPart} bodyPart={bodyPart} />
     </Box>
