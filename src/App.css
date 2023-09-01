@@ -47,6 +47,9 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.react-horizontal-scrolling-menu--inner-wrapper {
+    width:100%;
+}
 
 .detail-image {
   width: 729px;
@@ -64,7 +67,7 @@ body {
 }
 
 .exercise-card {
-  width: 400px;
+  width: fit-content;
   height: 445px;
   background: #fff;
   border-top: 4px solid #FF2625;
@@ -77,6 +80,20 @@ body {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
+.hsb{
+  width: calc((100vw - 104px)/2);
+}
+@media screen and (max-width:600px){
+  .hsb{
+    width: calc((100vw - 104px)/1);
+  }
+}
+@media screen and (min-width:1000px){
+  .hsb{
+    width: calc((100vw - 104px)/3);
+  }
+}
+
 
 .bodyPart-card {
   transform: scale(1, 1);
@@ -103,7 +120,7 @@ body {
 }
 
  .react-horizontal-scrolling-menu--scroll-container {
-    width: 75vw;
+    width: calc(100vw - 104px);
   }
 
 @media screen and (max-width:1200px) {
@@ -122,20 +139,10 @@ body {
   }
 
   .exercise-video {
-    width: 320px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
   }
 
-}
-
-.exercise-card {
-    width: 20vw;
-  }
-
-@media screen and (max-width:900px) {
-  .exercise-card {
-    width: 20vw;
-  }
 }
 .exercise-card img {
   height: 326px;

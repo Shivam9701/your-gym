@@ -12,8 +12,7 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
                     borderTop: bodyPart ===item ? '4px solid #ff2625':'',
                     backgroundColor: '#fff',
                     borderBottomLeftRadius: '20px',
-                    width: '15vw',
-                    height: '15vw',
+                    width: 'calc((100vw - 104px)/4)',
                     cursor: 'pointer',
                     gap: '4px'
                 
@@ -22,7 +21,7 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
         >
             <img src={Icon} alt="icon" style={{ width: '40px', height: '40px' }} />
         
-            <Typography sx={{ fontWeight: 'bold' ,fontSize: '0.69em' ,textTransform: 'Capitalize'}}>{item}</Typography>
+            <Typography sx={{ fontWeight: 'bold' ,fontSize: '.75em' ,textTransform: 'Capitalize'}}>{item}</Typography>
         </Stack>
     )
 }
